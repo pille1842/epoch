@@ -1,7 +1,7 @@
 function setTime() {
     var date    = new Date();
     var time    = date.toISOString();
-    var decimal = (date.now() / 1000) | 0;
+    var decimal = (date.getTime() / 1000) | 0;
     var binary  = decimal.toString(2);
     var hexadec = decimal.toString(16);
     $('#time').html(time);
