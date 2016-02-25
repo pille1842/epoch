@@ -1,5 +1,7 @@
-while (true) {
-    time = Date.now();
+function setTime() {
+    var time = Date.now();
     $('#decimal').html(time);
-    sleep(50);
+    var delay = setTimeout(setTime, 500);
 }
+
+setTime();
